@@ -12,12 +12,12 @@ int main(void)
     int index = 0;
     int length = (int)(sizeof(number)/sizeof(number[0]));
 
-    cout << "~~~~~~~~~~~~~~~Before swapping~~~~~~~~~~~~~~~~~~" << endl;
+    cout << "~~~~~~~~~~~~~~~Before Sorting~~~~~~~~~~~~~~~~~~" << endl;
     dispNumber(number, length);
 
     sortNum(number, length);
 
-    cout << "~~~~~~~~~~~~~~~After swapping~~~~~~~~~~~~~~~~~~" << endl;
+    cout << "~~~~~~~~~~~~~~~After Sorting~~~~~~~~~~~~~~~~~~" << endl;
     dispNumber(number,length);
     
     return 0;
