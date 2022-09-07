@@ -2,6 +2,7 @@
 
 using namespace std;
 
+void dispNumber(int* number, int length);
 void sortNum(int* number, int length);
 void swap(int& num1, int& num2);
 
@@ -12,17 +13,19 @@ int main(void)
     int length = (int)(sizeof(number)/sizeof(number[0]));
 
     cout << "~~~~~~~~~~~~~~~Before swapping~~~~~~~~~~~~~~~~~~" << endl;
-
-    for(index = 0; index < length; index++)
-    {
-        cout << number[index] << " ";
-    }
-
-    cout << endl;
+    dispNumber(number, length);
 
     sortNum(number, length);
 
     cout << "~~~~~~~~~~~~~~~After swapping~~~~~~~~~~~~~~~~~~" << endl;
+    dispNumber(number,length);
+    
+    return 0;
+}
+
+void dispNumber(int* number, int length)
+{
+    int index = 0;
 
     for(index = 0; index < length; index++)
     {
@@ -30,8 +33,6 @@ int main(void)
     }
 
     cout << endl;
-    
-    return 0;
 }
 
 void sortNum(int* number, int length)
