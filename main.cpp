@@ -5,6 +5,7 @@ using namespace std;
 void dispNumber(int* number, int length);
 void sortNum(int* number, int length);
 void swap(int& num1, int& num2);
+void isOver(int* number, int length);
 
 int main(void)
 {
@@ -19,6 +20,8 @@ int main(void)
 
     cout << "~~~~~~~~~~~~~~~After Sorting~~~~~~~~~~~~~~~~~~" << endl;
     dispNumber(number,length);
+
+    isOver(number, length);
     
     return 0;
 }
@@ -50,8 +53,6 @@ void sortNum(int* number, int length)
             }
         }
     }
-
-    return;
 }
 
 void swap(int& num1, int& num2)
@@ -61,6 +62,29 @@ void swap(int& num1, int& num2)
     numToChange = num1;
     num1 = num2;
     num2 = numToChange;
+
+    return;
+
+}
+
+void isOver(int* number, int length)
+{
+    int a = 0;
+    int index = 0;
+
+    cin >> a;
+
+    for(index = 0; index < length; index++)
+    {
+        if(number[index] > a)
+        {
+            cout << number[index] << " is larger than " << a << "." << endl;
+        }
+        else
+        {
+            cout << number[index] << " is " << a << " or smaller." << endl;
+        }
+    }
 
     return;
 }
